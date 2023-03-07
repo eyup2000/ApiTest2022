@@ -4,6 +4,7 @@ import Utils.JsonUtil;
 import base_url.GoRestApıBaseUrl;
 import class06_pojos.GoRestDataPojo;
 import class06_pojos.GoRestPojo;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -41,7 +42,7 @@ And
         GoRestPojo expectedDataPojo = new GoRestPojo(null,dataPojo);
         System.out.println(expectedDataPojo);
     //3.adım request gonder response al
-     Response response = given().spec(spec).when().get("/{first}/{second}");
+     Response response = given().spec(spec).contentType(ContentType.JSON).when().get("/{first}/{second}");
      response.prettyPrint();
 
     GoRestPojo actualDatesPojo = JsonUtil.jsonJavayaCevir(response.asString(),GoRestPojo.class);

@@ -82,8 +82,9 @@ Then
         assertEquals(expectedDates.get("depositpaid") , ((Map)actualData.get("booking")).get("depositpaid"));
         assertEquals(expectedDates.get("totalprice") , ((Map)actualData.get("booking")).get("totalprice"));
 
-assertEquals(expectedBookingDates.get("checkin"),((Map)((Map)actualData.get("booking")).get("bookingdates")).get("checkin"));
-assertEquals(expectedBookingDates.get("checkout"),((Map)((Map)actualData.get("booking")).get("bookingdates")).get("checkout"));
+
+        assertEquals(expectedBookingDates.get("checkin"),((Map)((Map)actualData.get("booking")).get("bookingdates")).get("checkin"));
+        assertEquals(expectedBookingDates.get("checkout"),((Map)((Map)actualData.get("booking")).get("bookingdates")).get("checkout"));
 
     }
 }
