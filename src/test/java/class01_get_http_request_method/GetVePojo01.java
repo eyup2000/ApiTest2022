@@ -37,9 +37,9 @@ And response body is like
     public void getVePojo01(){
     spec.pathParams("first","booking","second",2);
 
-    BookingDatesPojo bookingDates = new BookingDatesPojo("2017-10-26","2021-12-25");
+    BookingDatesPojo bookingDates = new BookingDatesPojo("2017-03-26","2020-11-13");
 
-    BookingPojo requestBody = new BookingPojo("Sally","Smith",565,true,bookingDates,"Breakfast");
+    BookingPojo requestBody = new BookingPojo("Mark","Brown",709,true,bookingDates,"Breakfast");
 
     System.out.println(requestBody);
 

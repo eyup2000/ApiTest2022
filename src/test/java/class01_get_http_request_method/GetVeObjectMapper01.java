@@ -46,6 +46,7 @@ Then
         //2.yol
 JsonPlaceHolderTestData data = new JsonPlaceHolderTestData();
 String beklenenDataMap2 = data.beklenenDataStringFormantında(10,"quis eius est sint explicabo",true);
+
 Map<String, Object> beklenenDataMap = JsonUtil.jsonJavayaCevir(beklenenDataMap2,HashMap.class);
 System.out.println(beklenenDataMap);
 
