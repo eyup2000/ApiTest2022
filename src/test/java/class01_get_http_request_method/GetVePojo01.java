@@ -48,6 +48,7 @@ And response body is like
     response.prettyPrint();
 
     BookingPojo actualData = response.as(BookingPojo.class);
+    System.out.println("actualData = " + actualData);
 
     Assert.assertEquals(requestBody.getFirstname(),actualData.getFirstname());
     Assert.assertEquals(requestBody.getLastname() , actualData.getLastname());
